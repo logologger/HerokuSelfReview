@@ -38,5 +38,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.send(err.status);
 });
-app.listen(process.env.port || 3000, () => console.log(`Example app listening on port ${3000}!`))
+app.listen(process.env.PORT || 3000, () => console.log(`Example app listening on port ${3000}!`))
 module.exports = app;
