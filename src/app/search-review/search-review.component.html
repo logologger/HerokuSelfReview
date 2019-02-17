@@ -1,0 +1,20 @@
+<div class="searc-results">
+  <p>Find your pool</p>
+
+  <input type="search" placeholder="new search" name="search"/>
+  <button>Search</button>
+  <table border="1">
+    <tr>
+      <td>Address</td>
+      <td>Pool Size</td>
+      <td>Cost per night</td>
+      <td>Details</td>
+    </tr>
+    <tr *ngFor="let search of searchResults">
+      <td> {{ search.address }}</td>
+      <td> {{ search.poolsize}} </td>
+      <td> {{ search.costpernight}}</td>
+      <td> <a href="#">{{ search.details }}</a> </td>
+    </tr>
+  </table>
+</div>

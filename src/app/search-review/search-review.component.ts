@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  selector: 'app-search-review',
+  templateUrl: './search-review.component.html',
+  styleUrls: ['./search-review.component.css']
 })
-export class DashboardComponent implements OnInit {
-  public  searchResults = [
+export class SearchReviewComponent implements OnInit {
+ public  searchResults = [
     {"address":"8888 Pike , SeattleWA 98102",
     "poolsize":"large",
     "costpernight":"$200",
@@ -28,5 +28,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
   }
+
+ 
 
 }

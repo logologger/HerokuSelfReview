@@ -1,3 +1,18 @@
-<p>
-  pools-detail-page works!
-</p>
+<div class="pools-details">
+  <div class="upper-div">
+  <div class="pools-address">
+    {{ pooladdress }}
+  </div>
+  <div class="user-details">
+    {{userdetails }}
+  </div>
+</div>
+<div class="middle">
+  <p>Reviews (4/5)</p> 
+  <a href="">Leave a review</a>
+</div>
+  <div class="ratings" *ngFor="let rating of ratings">
+    <p> {{ rating.name}} {{  rating.num }}</p>
+    <p> {{ rating.msg }} </p>
+  </div>
+</div>

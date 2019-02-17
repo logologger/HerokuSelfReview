@@ -1,0 +1,14 @@
+.upper-div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:40px;
+}
+.ratings {
+    border:1px solid black;
+}
+.middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

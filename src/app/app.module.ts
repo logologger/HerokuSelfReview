@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { BookComponent } from './book/book.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
@@ -24,6 +23,7 @@ import { RegisterComponent } from './register/register.component';
 import { PoolsDetailPageComponent } from './pools-detail-page/pools-detail-page.component';
 import { ReviewPageViewComponent } from './review-page-view/review-page-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SearchReviewComponent } from './search-review/search-review.component';
 
 const appRoutes: Routes = [
   {
@@ -31,9 +31,24 @@ const appRoutes: Routes = [
     component:SearchComponent
   },
   {
-    path: 'books',
-    component: BookComponent,
-    data: { title: 'Book List' }
+    path: 'search',
+    component: SearchReviewComponent
+  },
+  {
+    path:'pool-details/:id',
+    component:PoolsDetailPageComponent
+  },
+  {
+    path:'pool-details/:id/review',
+    component:ReviewPageViewComponent
+  },
+  {
+    path:'guest/signin',
+    component:LoginComponent
+  },
+  {
+    path:'host/dashboard',
+    component:DashboardComponent
   }
   
 ];
@@ -41,13 +56,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
     LoginComponent,
     SearchComponent,
     RegisterComponent,
     PoolsDetailPageComponent,
     ReviewPageViewComponent,
-    DashboardComponent
+    DashboardComponent,
+    SearchReviewComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

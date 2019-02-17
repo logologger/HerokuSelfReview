@@ -1,3 +1,33 @@
-<p>
-  dashboard works!
-</p>
+<div class="dashboard">
+    <table border="1">
+        <tr>
+          <td>Address</td>
+          <td>Pool Size</td>
+          <td>Cost per night</td>
+          <td>Details</td>
+        </tr>
+        <tr *ngFor="let search of searchResults">
+          <td> {{ search.address }}</td>
+          <td> {{ search.poolsize}} </td>
+          <td> {{ search.costpernight}}</td>
+          <td> <a href="#">{{ search.details }}</a> </td>
+        </tr>
+      </table>
+
+      <div class="dashboard-page">
+
+          <form>
+              <fieldset>
+               <legend>Add a listing:</legend>
+              Address: <input type="text"><br>
+              Description: <textarea rows="20" cols="30" type="text"></textarea><br>
+              Cost per night: <input type="text"><br>
+               Pool Siz: <select>
+                 <option>small</option>
+                 <option>medium</option>
+                 <option>large</option>
+               </select>
+              </fieldset>
+             </form>
+            </div>
+  </div>
